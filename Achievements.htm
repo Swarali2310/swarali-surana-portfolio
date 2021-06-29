@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Achievements</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <style>
+            .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+            color: #fff;
+            background-color: black;
+            }
+            .nav-pills a{
+            color: black
+            }
+            <!--{
+                box-sizing: border-box;
+                }-->
+            body {
+            background-color: #ffffff;
+            font-family: Calibri;
+            font-size: 16px
+            }
+            /* The actual timeline (the vertical ruler) */
+            .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            }
+            /* The actual timeline (the vertical ruler) */
+            .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: gray;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            }
+            /* custom_container around content */
+            .custom_container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            }
+            /* The circles on the timeline */
+            .custom_container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            }
+            /* Place the custom_container to the left */
+            .left {
+            left: -0.3%;
+            }
+            /* Place the custom_container to the right */
+            .right {
+            left: 50.3%;
+            }
+            /* Add arrows to the left custom_container (pointing right) */
+            .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid black;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #d3d3d3;
+            }
+            /* Add arrows to the right custom_container (pointing left) */
+            .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid black;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #d3d3d3 transparent transparent;
+            }
+            /* Fix the circle for custom_containers on the right side */
+            .right::after {
+            left: -16px;
+            }
+            /* The actual content */
+            .content {
+            padding: 20px 30px;
+            background-color: #d3d3d3;
+            position: relative;
+            border-radius: 6px;
+            }
+            /* Media queries - Responsive timeline on screens less than 600px wide */
+            @media screen and (max-width: 600px) {
+            /* Place the timelime to the left */
+            .timeline::after {
+            left: 31px;
+            }
+            /* Full-width custom_containers */
+            .custom_container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+            }
+            /* Make sure that all arrows are pointing leftwards */
+            .custom_container::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+            }
+            /* Make sure all circles are at the same spot */
+            .left::after, .right::after {
+            left: 15px;
+            }
+            /* Make all right custom_containers behave like the left ones */
+            .right {
+            left: 0%;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1><b>Swarali Surana</b></h1>
+        </center>
+        <br>
+        <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+              <li class="mav-item">
+                <a class="nav-link" href="index.htm">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Projects.htm">Projects</a>
+              </li>
+              <li class="active">
+                <a class="nav-link" href="Achievements.htm">Achievements</a>
+              </li>
+            </ul>
+            </nav> -->
+        <div class="container">
+            <ul class="nav nav-pills nav-justified">
+                <li>
+                    <a href="index.htm">
+                        <h4><b>Home</b></h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="Projects.htm">
+                        <h4><b>Projects</b></h4>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="Achievements.htm">
+                        <h4><b>Achievements and Recognitions</b></h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="timeline">
+			<div class="custom_container left">
+                <div class="content">
+                    <h2>2021</h2>
+                    <p><br><b>High Five Individual Award</b><br><br><b>Comments :</b> For the excellent grasping shown on Netezza on Cloud Project and work done on scaling tasks<br><br>
+                    </p>
+                </div>
+            </div>
+			<div class="custom_container right">
+                <div class="content">
+                    <h2>2020</h2>
+                    <p><br><b>CS380L : Advanced Operating System (University of Texas at Austin)</b><br><br><b>Grade :</b> A<br><br>
+                    </p>
+					<p>
+					<b>Syllabus : </b><br>
+					• CPU Virtualization<br>
+					• Memory Virtualization<br>
+					• Storage Virtualization<br>
+					• OS Architecture, Containers, Full-Machine Virtualization, Heterogeneity<br>
+					</p>	
+                </div>
+            </div>
+			<div class="custom_container left">
+                <div class="content">
+                    <h2>2020</h2>
+                    <p><br><b>CS391L : Machine Learning (University of Texas at Austin)</b><br><br><b>Grade :</b> A-<br><br>
+                    </p>
+					<p>
+					<b>Syllabus : </b><br>
+					• Mistake Bounded Learning <br>
+					• Decision Trees; PAC Learning<br>
+					• Cross Validation; VC Dimension; Perceptron <br>
+					• Linear Regression; Gradient Descent <br>
+					• Boosting <br>
+					• PCA; SVD <br>
+					• Maximum likelihood estimation <br>
+					• Bayesian inference <br>
+					• K-means and EM <br>
+					• Multivariate models and graphical models<br>
+					• Neural networks; generative adversarial networks (GAN)<br>
+					</p>
+					
+                </div>
+            </div>
+            <div class="custom_container right">
+                <div class="content">
+                    <h2>2020</h2>
+                    <p><br><b>High Five Team Award</b><br><br><b>Comments :</b> Significant contribution for releasing the first version of IBM Performance Server for Postgres Product<br><br></p>
+                </div>
+            </div>
+			<div class="custom_container left">
+                <div class="content">
+                    <h2>2019</h2>
+                    <p><br><b>High Five Individual Award</b><br><br><b>Comments :</b> For efforts and perseverence shown in solving critical Netezza defects in areas of Replication and System Health Check.<br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="custom_container right">
+                <div class="content">
+                    <h2>2019</h2>
+                    <p><br>All India Rank <b>437</b> (among > 100,000 students) in Graduate Aptitude Test in Engineering (GATE), 2019</p>
+                </div>
+            </div>
+            <div class="custom_container left">
+                <div class="content">
+                    <h2>2018</h2>
+                    <p><br><b>ACM India Summer School on Information Security and Forensics (for Women)</b><br><br>• I had applied and was selected in the top 40 amongst girl applicants from all over India based on our resume and Statement of Purpose for attending the school.<br><br>
+                        • Theory and hands-on learning on topics like Cryptography and Number theory, Data Privacy, Digital Forensics Fundamentals, Mathematical Models of Computer Security, Mutual Trust Mechanisms, Network and Internet Security and Software and Application Security.<br><br>
+                        • We had a cyber forensic field agent who got us started with actual tools used by them to capture information from compromised systems.<br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="custom_container right">
+                <div class="content">
+                    <h2>2017</h2>
+                    <p><br><b>Microsoft India Academic Research Summit</b><br><br>
+                        • The purpose of this research summit was to share ideas and explore challenges faced around using technology for societal good<br><br>
+                        • Eminent Researchers like Jaime Teevan (Chief Scientist, Microsoft Research), Nutan Limaye (Professor, IIT Bombay), and Srujana Merugu (PhD, University of Texas at Austin) were a part of the ACM-W (ACM-women’s Initiative to encourage the participation of women in computing) panel discussion. In this, they talked about their journey and research work.<br><br>
+                        • I was one of the only four undergrad students selected for the Research Summit.<br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="custom_container left">
+                <div class="content">
+                    <h2>2016</h2>
+                    <p><br><b>Persistent Computing Institute’s Winter School on Data and Functional Programming</b><br><br>
+                        • The purpose of the school was to re-emphasize the relation between Math and Computing<br><br>
+                        • Learnt the integration of theoretical math concepts of λ-calculus in functional programming language ‘Gofer’<br><br>
+                        • Built a compiler and interpreter for functional programming language ‘Gofer’ in ‘Gofer’<br><br>
+                        • Secured an ‘A’ grade with 5 other students out of 40 at the end of the school.<br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="custom_container right">
+                <div class="content">
+                    <h2>2012</h2>
+                    <p><br><b>Trained in Hindustani classical music for 7 years</b><br></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
